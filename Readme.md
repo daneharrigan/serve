@@ -5,7 +5,8 @@ port 8080, but if 8080 is already in use it will look for an available port
 by incrementing the port by 1. Serve will try up to 5 ports by default.
 
 All content is served with the `Cache-Control: max-age=0` header and
-`Last-Modified` set to the current time.
+`Last-Modified` set to the current time so refreshing the browser will always
+display the latest changes.
 
 ## Install
 
