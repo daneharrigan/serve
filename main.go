@@ -45,13 +45,14 @@ func main() {
 		base := filepath.Base(path)
 
 		log.Printf("fn=listen port=%d directory=%s", *port, base)
-		err := http.ListenAndServe(fmt.Sprintf(":%d", *port), handler)
+		http.ListenAndServe(fmt.Sprintf(":%d", *port), handler)
+		msg := "port already in use"
 
 		if provided {
-			log.Fatalf("fn=listen error=%q", err)
+			log.Fatalf("fn=listen error=%q", msg)
 		}
 
-		log.Printf("fn=listen error=%q", err)
+		log.Printf("fn=listen error=%q", msg)
 		*port++
 	}
 
