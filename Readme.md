@@ -21,30 +21,30 @@ Serve my current directory over port 8080:
 
 ```bash
 $ serve
-fn=start port=8080 directory=foo
+fn=listen port=8080 directory=foo
 ```
 
 Serve my current directory over port 5000:
 
 ```bash
 $ serve -p 5000
-fn=start port=5000 directory=foo
+fn=listen port=5000 directory=foo
 ```
 
 Serve a diffrent directory:
 
 ```bash
 $ serve -d ../foo
-fn=start port=8080 directory=foo
+fn=listen port=8080 directory=foo
 ```
 
 Try binding to a port up to 10 times:
 
 ```bash
 $ serve -r 10
-fn=start port=8080 directory=foo
-fn=start error="port already in use"
-fn=start port=8081 directory=foo
-fn=start error="port already in use"
-fn=start port=8082 directory=foo
+fn=listen port=8080 directory=foo
+fn=listen error="port already in use"
+fn=listen port=8081 directory=foo
+fn=listen error="port already in use"
+fn=listen port=8082 directory=foo
 ```
