@@ -48,3 +48,15 @@ fn=listen port=8081 directory=foo
 fn=listen error="port already in use"
 fn=listen port=8082 directory=foo
 ```
+
+## Logging
+
+All requests served by Serve are logged in an easy to read key/value format. An
+example of this is:
+
+```
+app=serve method=GET path=/
+app=serve method=GET path=/favicon.ico
+app=serve method=GET path=/bars.html
+app=serve method=POST path=/example.json
+```
